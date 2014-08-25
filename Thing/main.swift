@@ -8,5 +8,29 @@
 
 import Foundation
 
-println("Hello, World!")
+var primes = [2]
+
+for num in 3...10000
+{
+    var notAPrime = false
+    for prime in primes
+    {
+        if num % prime == 0
+        {
+            notAPrime = true
+            break
+        }
+        
+    }
+    if !notAPrime
+    {
+        primes.append(num)
+    }
+}
+
+println(primes)
+
+primes.capacity
+
+
 
